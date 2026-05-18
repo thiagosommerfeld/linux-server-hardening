@@ -1,5 +1,3 @@
-# linux-server-hardening
-
 # 🛡️ Linux Server Hardening & Security Baseline
 
 ## 📋 About the Project
@@ -59,7 +57,7 @@ To protect the server's perimeter, I installed and configured UFW (Uncomplicated
 * **Ping (ICMP) Blocking:** To cloak the server from external network scans, I edited the `/etc/ufw/before.rules` file to drop "ping" packets.
 * Action: Under the `# ok icmp codes for INPUT` section, I changed the `ACCEPT` rules to `DROP` for `echo-request`.
 
-6. Cloud Provider Perimeter Security (AWS Security Groups)
+### 6. Cloud Provider Perimeter Security (AWS Security Groups)
 Even with the OS firewall active, the cloud perimeter must be secured. In the AWS Management Console:
 
 Navigated to the instance's Security Group.
