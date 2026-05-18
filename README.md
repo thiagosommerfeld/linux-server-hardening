@@ -67,4 +67,4 @@ Deleted the default rule allowing SSH on port 22 (`0.0.0.0/0`).
 Added a new Custom TCP rule allowing incoming traffic on port `717`.
 
 ## 📈 Results
-Following the implementation, the server became resilient to common network scanners (e.g., Nmap), immune to SSH password cracking (Brute Force/Dictionary attacks), and now remediates security flaws automatically.
+Following the implementation, the server became resilient to common network scanners (e.g., Nmap), immune to SSH password cracking (Brute Force/Dictionary attacks), and now remediates security flaws automatically. The server no longer responds to ICMP ping requests, reducing its visibility to automated botnets
