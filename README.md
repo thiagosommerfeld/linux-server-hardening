@@ -36,8 +36,8 @@ The SSH service is the number one target for malicious scripts. I edited the `/e
 * **Disabled Root Login:** `PermitRootLogin no` (Blocks direct login attempts to the administrator account).
 * **Disabled Passwords:** `PasswordAuthentication no` (Forces the exclusive use of the cryptographic keys created in step 3).
 * **IP Restriction:** Configured to accept only IPv4 traffic (`AddressFamily inet`).
-* 
-* ⚠️ Troubleshooting & Modern Ubuntu Quirks
+  
+  ⚠️ Troubleshooting & Modern Ubuntu Quirks
 On newer Ubuntu versions, simply changing the sshd_config file and restarting the service might not change the port due to Systemd sockets and Cloud-Init overrides. To enforce the custom port and disable passwords, the following steps were taken:
 
 1. Disable Systemd SSH Socket:
@@ -48,7 +48,7 @@ sudo systemctl daemon-reload`
 2. Check for Cloud-Init Overrides:
 If port 22 is still active, edit the cloud overrides file (if it exists): `sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf`
 
-# Ensure 'PasswordAuthentication no' is set and remove any 'Port 22' entries.
+Action: Ensure `PasswordAuthentication no` is set and remove any `Port 22` entries.
 
 3. Restart the SSH Service: `sudo systemctl restart ssh`
 
