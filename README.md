@@ -1,4 +1,4 @@
-# 🛡️ Linux Server Hardening & Security Baseline
+# 🛡️ Linux Server Hardening
 
 ## 📋 About the Project
 This project documents the hardening process of a newly deployed AWS cloud-based Linux server Ubuntu. The goal is to drastically reduce the server's attack surface, protecting it against automated attacks, brute force, and malicious network scanning.
